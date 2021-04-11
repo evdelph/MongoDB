@@ -25,4 +25,16 @@ Without this, you will be unable to utilize the API functionality in mongo.py, a
 
 ### Setting up mongoshell
 
-Data is stored in MongoDB Atlas Cluster.
+Reddit data will be be ingested via the API and stored in a MongoDB database. To run mongo commands, you will either need to use a VM with mongo shell pre-installed, or install mongo shell on your desktop. For the VM, I used IU Jetstream, but any VM will work. To install mongo shell on your personal device, follow the steps below:
+
+1. Download mongo shell [here](https://www.mongodb.com/try/download/shell)
+2. Add mongo shell binary to path (to be done in the command line)
+
+```
+touch ~/.bash_profile
+open ~/.bash_profile
+export PATH="<mongo-directory?.bin:$PATH" # type this into bash_profile
+# save and exit file
+source ~/.bash_profile
+echo $PATH
+```
