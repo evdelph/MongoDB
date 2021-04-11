@@ -68,6 +68,19 @@ optional arguments:
 
 ```
 
+The following fields are included in the output:
+
+1. Post ID
+2. Number of Comments
+3. Post Created (Timestamp)
+4. Post Score
+5. Post Upvote Ratio
+6. Post Ups
+7. Post Downs
+8. Post Title
+9. Post Body
+10. Replies
+
 For this demostration, the subreddit cgrpMigraine was utilized.
 
 **Run script without destination path**
