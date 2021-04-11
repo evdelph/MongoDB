@@ -53,6 +53,8 @@ class RedditClient(object):
 
         for post in self.posts:
 
+            print(post)
+
             comments = []
             comment_docs = {}
 
@@ -71,14 +73,17 @@ class RedditClient(object):
 
         # append all components to mongodb_doc
         mongo_docs.append(
-        {'id': post.id,
-        'num_comments': post.num_comments,
-        'created_at': post.created,
-        'score': post.score,
-        'title': post.title,
-        'body': body,
-        'replies':comments}
-    )
+            {'id': post.id,
+            'num_comments': post.num_comments,
+            'created_at': post.created,
+            'score': post.score,
+            'upvote_ratio':post.upvote_ratio,
+            'ups':post.ups,
+            'downs':post.downs,
+            'title': post.title,
+            'body': body,
+            'replies':comments}
+             )
 
         return mongo_docs
 
