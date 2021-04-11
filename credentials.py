@@ -1,3 +1,3 @@
-client_id = "CRZVmeuRM2Sr4A"
-client_secret = "7Ogb9Z_YE7rEzAp3eDMTBaQmjv257A"
-user_agent = "migraineScraper"
+client_id = "your_client_id"
+client_secret = "your_client_secret"
+user_agent = "your_user_agent"
