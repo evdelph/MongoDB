@@ -182,7 +182,10 @@ mongoexport --uri="mongodb+srv://cluster0.c7slc.mongodb.net/Reddit" --username u
 --collection=cgrpMigraine --query='{"body":{"$regex":".*imovig*.","$options":""},"score":{"$gt":-1}}' /
 --fields created_at,ups,upvote_ratio,downs,body --type csv --out timestamps.csv
 ```
-The files post.csv and replies.csv are provided in the repo. These files were used in the data visualization step.
+The files post.csv and replies.csv are provided in the repo. I provided another file called `exploded_timestamps.csv`. I used [pyspark](https://spark.apache.org/docs/latest/api/python/index.html) create a dataframe of words from the post. It is recommended to use a VM for this step.
 
 ## Data Analysis and Visualization
-The [RedditVisualization.ipynb](https://github.com/evdelph/MongoDB/blob/main/RedditVisualization.ipynb) notebook contains step by step instructions how to analyze exported Reddit data. In this example, I looked at frequent unigrams and bigrams over the three cgrp autoinjector medications: Aimovig, Ajovy, and Emgality.
+The [RedditNLP.ipynb](https://github.com/evdelph/MongoDB/blob/main/Visualizations/RedditNLP.ipynb) notebook contains step by step instructions how to analyze exported Reddit data. In this example, I looked at frequent unigrams and bigrams over the three cgrp autoinjector medications: Aimovig, Ajovy, and Emgality. I also conducted LDA topic clustering.
+
+The [RedditTimestamps.ipynb](https://github.com/evdelph/MongoDB/blob/main/Visualizations/RedditTimestamps.ipynb) notebook shows word usage over time. Visualizations include a Treemap, Heatmap, and Scatterplot.
+
