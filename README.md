@@ -164,16 +164,21 @@ db.cgrpMigraine.find({body: /.*imovig.*/, score: {$gt: 15}}).count()
 To export results, follow the format below:
 ```
 # Basic structure
-mongoexport --uri="mongodb+srv://cluster0.c7slc.mongodb.net/Reddit" --username user --password ProjectB! --collection=cgrpMigraine --query='' --fields field1,field2 --type csv --out yourfile.csv
+mongoexport --uri="mongodb+srv://cluster0.c7slc.mongodb.net/Reddit" --username user --password ProjectB!/
+--collection=cgrpMigraine --query='' --fields field1,field2 --type csv --out yourfile.csv
 
 # Output posts based on query
-mongoexport --uri="mongodb+srv://cluster0.c7slc.mongodb.net/Reddit" --username user --password ProjectB! --collection=cgrpMigraine --query='{"body":{"$regex":".*imovig*.","$options":""},"score":{"$gt":15}}' --fields body,score --type csv --out posts.csv
+mongoexport --uri="mongodb+srv://cluster0.c7slc.mongodb.net/Reddit" --username user --password ProjectB!/
+--collection=cgrpMigraine --query='{"body":{"$regex":".*imovig*.","$options":""},"score":{"$gt":15}}' --fields body,score --type csv --out posts.csv
 
 # Output replies based on query
-mongoexport --uri="mongodb+srv://cluster0.c7slc.mongodb.net/Reddit" --username user --password ProjectB! --collection=cgrpMigraine --query='{"body":{"$regex":".*imovig*.","$options":""},"score":{"$gt":15}}' --fields replies,score --type csv --out replies.csv
+mongoexport --uri="mongodb+srv://cluster0.c7slc.mongodb.net/Reddit" --username user --password ProjectB! /
+--collection=cgrpMigraine --query='{"body":{"$regex":".*imovig*.","$options":""},"score":{"$gt":15}}' --fields replies,score --type csv --out replies.csv
 
 # Output all posts containing aimovig
-mongoexport --uri="mongodb+srv://cluster0.c7slc.mongodb.net/Reddit" --username user --password ProjectB! --collection=cgrpMigraine --query='{"body":{"$regex":".*imovig*.","$options":""},"score":{"$gt":-1}}' --fields created_at,ups,upvote_ratio,downs,body --type csv --out replies.csv
+mongoexport --uri="mongodb+srv://cluster0.c7slc.mongodb.net/Reddit" --username user --password ProjectB!/
+--collection=cgrpMigraine --query='{"body":{"$regex":".*imovig*.","$options":""},"score":{"$gt":-1}}' /
+--fields created_at,ups,upvote_ratio,downs,body --type csv --out timestamps.csv
 ```
 The files post.csv and replies.csv are provided in the repo. These files were used in the data visualization step.
 
