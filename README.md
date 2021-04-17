@@ -169,11 +169,13 @@ mongoexport --uri="mongodb+srv://cluster0.c7slc.mongodb.net/Reddit" --username u
 
 # Output posts based on query
 mongoexport --uri="mongodb+srv://cluster0.c7slc.mongodb.net/Reddit" --username user --password ProjectB!/
---collection=cgrpMigraine --query='{"body":{"$regex":".*imovig*.","$options":""},"score":{"$gt":15}}' --fields body,score --type csv --out posts.csv
+--collection=cgrpMigraine --query='{"body":{"$regex":".*imovig*.","$options":""},"score":{"$gt":15}}'/
+--fields body,score --type csv --out posts.csv
 
 # Output replies based on query
 mongoexport --uri="mongodb+srv://cluster0.c7slc.mongodb.net/Reddit" --username user --password ProjectB! /
---collection=cgrpMigraine --query='{"body":{"$regex":".*imovig*.","$options":""},"score":{"$gt":15}}' --fields replies,score --type csv --out replies.csv
+--collection=cgrpMigraine --query='{"body":{"$regex":".*imovig*.","$options":""},"score":{"$gt":15}}'/
+--fields replies,score --type csv --out replies.csv
 
 # Output all posts containing aimovig
 mongoexport --uri="mongodb+srv://cluster0.c7slc.mongodb.net/Reddit" --username user --password ProjectB!/
