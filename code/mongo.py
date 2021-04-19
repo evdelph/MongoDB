@@ -31,7 +31,7 @@ class RedditClient(object):
         self.posts = None
         
         try:
-            self.posts = self.reddit.subreddit(self.subreddit).hot(limit=10)
+            self.posts = self.reddit.subreddit(self.subreddit).hot(limit=1000)
             print(f'API Call Successful!')
         except:
             print(f'Sorry, {self.subreddit} does not exist. Please try again.')
